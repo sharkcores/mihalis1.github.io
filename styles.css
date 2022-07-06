@@ -1,0 +1,132 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(80deg,#2bff00, #00fff2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: white;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: arial;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.4em;
+}
+
+h2{
+    margin: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+}
+
+h3{
+    font-size: 16px;
+    margin-top: 0.3em;
+    font-family: arial;
+    text-decoration:solid white underline;
+}
+
+#smallTitle{
+    text-align: left;
+    min-width: 60%;
+    max-width: 60%;
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 750;
+    color: rgb(59, 59, 59);
+}
+
+p{
+    min-width: 60%;
+    text-align: left;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    max-width: 60%;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.imp{
+    background: -webkit-linear-gradient(80deg,#2bff00, #00fff2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.bottom{
+    background: linear-gradient(80deg,#2bff00, #00fff2);
+    background-color: #2bff00;
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    top: 10vh;
+    
+}
+
+.code{
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 7px;
+    min-width: 60%;
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+}
