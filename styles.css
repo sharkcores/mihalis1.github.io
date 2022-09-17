@@ -1,0 +1,117 @@
+body{
+    font-family: 'roboto';
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(19, 19, 19);
+}
+
+h1 { font-size: 10vw; font-family: 'roboto';}
+#title, #imp, .imp{    
+    background: linear-gradient(to right, cyan 20%, rgb(0, 255, 21) 40%, rgb(0, 255, 34) 60%, cyan 80%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 1s linear infinite;
+  }
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+#start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2{
+    font-size: 2em;
+    min-width: 60vw;
+    margin: 10px;
+    color: white;
+}
+
+p{
+    font-size: 1.3em;
+    max-width: 60vw;
+    color: white;
+    margin: 10px;
+}
+
+#end{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tab{
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.5s ;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 20px;
+    background-color: rgb(27, 27, 27);
+}
+
+.tab button{
+    border: none;
+    background: linear-gradient(to right, rgb(0, 255, 34) , cyan);
+    height: 20px;
+    width: 100%;
+}
+
+
+
+.tab button:hover{
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 1700px) {
+    p{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 4em;
+    }
+  }
+
+
+
+  @media only screen and (min-width: 2560px) {
+    p{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 5em;
+    }
+  }
+
+
+
+@media only screen and (max-width: 600px) {
+    .tab{
+        white-space:unset;
+    }
+    h2{
+        max-width: 90vw;
+        text-align: center;
+        width: 100vw;
+    }
+    p{
+        text-align: center;
+        max-width: 90vw;
+    }
+}
