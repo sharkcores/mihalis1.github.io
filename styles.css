@@ -137,3 +137,13 @@ p{
         max-width: 90vw;
     }
 }
+
+.hidden{
+  opacity: 0;
+  transform: translateX(-25%);
+  transition: 1s ;
+}
+.show{
+  transform: translateX(0);
+  opacity: 1;
+}
