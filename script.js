@@ -1,11 +1,22 @@
-if (location.protocol !== 'https:') {
-    location.replace(`https:${location.href.substring(location.protocol.length)}`);
-}
+
 
 let openTab = document.querySelector('.tab button')
 let tab = document.querySelector('.tab')
 let insideTab = document.querySelectorAll('.insideTab')
 let opened = false
+
+const observer = new IntersectionObserver ((ent) => {
+    ent.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    })
+})
+
+const hidden = document.querySelectorAll('.hidden')
+hidden.forEach((el) => observer.observe(el));
 
 for(let i = 0; i < insideTab.length; i++){
     console.log(insideTab[i])
@@ -23,3 +34,5 @@ openTab.addEventListener('click', () => {
     }
     
 })
+
+
