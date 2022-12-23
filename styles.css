@@ -191,27 +191,18 @@ table {
         width: 100%;
         text-align: center;
     }
-    #infoHorizontal {
-        display: flex;
-  align-items: center;
-  justify-content: center;
-      }
+    #infoHorizional{
+        min-width: 100vw;
+        margin-left: 0;
+    }
 
-    
-    #infoHorizontal p{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #random-title1{
-        margin: auto;
+    #infoHorizional p{
         min-width: 90vw;
+        margin: auto;
     }
-    #random-title0{
-        text-align: center;
-        
-    }
+
 }
+
 
 #button1{
     text-decoration: none;
