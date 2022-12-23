@@ -1,14 +1,25 @@
+
 body{
     overflow-x: hidden;
     height: 100vh;
-    color: white;
+    color: rgb(225, 225, 225);
     font-family: 'Poppins', sans-serif;
     background-color: rgb(14, 14, 14);
+
     margin: 0;
 }
 
+#background{
+    filter: brightness(55%);
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-image: url(img.png);
+}
+
 #tab{
-    background-color: rgb(19, 19, 19);
+    background-color: rgba(19, 19, 19, 0.515);
     position: fixed;
     top: 0px;
     display: flex;
@@ -154,13 +165,6 @@ table {
     color: white;
   }
 
-.red{
-    color: red;
-}
-
-.green{
-    color: green;
-}
 
 
 
@@ -209,3 +213,39 @@ table {
         
     }
 }
+
+#button1{
+    text-decoration: none;
+    user-select: none;
+    font-weight: 800;
+    border-radius: 10px;
+    border: rgb(8, 152, 255) 2px solid;
+    color: rgb(8, 152, 255);
+    background: transparent;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    font-size: 24px;
+    background-image: linear-gradient(to right, transparent 50%, rgb(8, 152, 255) 50%);
+    background-size: 200%;
+    background-position: 0;
+}
+
+#button1:hover{
+    box-shadow: 0px 0px 15px rgb(8, 152, 255);
+    color: white;
+    background-position: 100%;
+}
+
+th{
+    color: rgb(24, 24, 24);
+}
+
+.red{
+    color: rgb(234, 41, 41);
+}
+
+.green{
+    color: rgb(86, 234, 41);
+}
+
