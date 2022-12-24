@@ -1,15 +1,16 @@
 body{
     overflow-x: hidden;
     height: 100vh;
-    color: rgb(225, 225, 225);
+    color: rgb(31, 31, 31);
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(14, 14, 14);
+    background-color: rgb(22, 22, 22);
 
     margin: 0;
 }
 
 #background{
-    filter: brightness(55%);
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
     position: fixed;
     top: 0px;
@@ -18,6 +19,7 @@ body{
 }
 
 #tab{
+    z-index: 999;
     background-color: rgba(19, 19, 19, 0.515);
     position: fixed;
     top: 0px;
@@ -71,8 +73,9 @@ body{
 }
 
 .center{
+    text-shadow: black 1px 0 4px;
     text-align: center;
-    color: white;
+    color: rgb(233, 233, 233);
 }
 
 /* width */
@@ -96,6 +99,7 @@ body{
   }
 
 #info{
+    
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -111,11 +115,145 @@ body{
 }
 
 #infoChild{
+    border-radius: 5px;
+    background: rgba(169, 169, 169, 0.368);
+    backdrop-filter: blur(5px);
+    max-width: 90vw;
+    box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.3), -14px -14px 28px rgba(255, 255, 255, 0.3);
+    padding: 10px;
     margin: 10px;
-    max-width: 45vw;
+    max-width: 30vw;
 }
 
-h1, h2, h3, .imp{    
+@media only screen and (max-width: 900px) {
+    #infoChild{
+        max-width: 42vw;
+    }
+}
+
+
+#infoHorizional{
+    margin-left: 4vw;
+}
+
+#infoHorizional h2{
+    text-shadow: rgb(42, 42, 42) 1px 0 3px;
+    color: rgb(233, 233, 233);
+}
+
+#infoHorizional p{
+    background: rgba(169, 169, 169, 0.368);
+    backdrop-filter: blur(5px);
+    max-width: 90vw;
+    box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.3), -14px -14px 28px rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#buying{
+    width: 100vw;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 2560px) {
+    h1, h2, h3, h4, h5{
+        font-size: 2vw;
+    }
+    #infoChild{
+        margin: 20px;
+    }
+    p{
+        font-size: 1vw;
+    }
+    #button1{
+        color: black;
+    }
+    #shark1{
+        color: #191919;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    body{
+        text-align: center;
+    }
+    .del{
+        display: none;
+    }
+    #info{
+        align-items: center;
+        flex-direction: column;
+    }
+    #infoChild{
+        box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        background-color: rgba(240, 240, 240, 0.228);
+        text-align: center;
+        margin: none;
+        padding: 5px;
+        max-width: 90vw;
+    }
+    #infoChild p{
+        text-align: center;
+        margin: 0;
+    }
+    p{
+        width: 100%;
+        text-align: center;
+    }
+    #infoHorizional{
+        min-width: 100vw;
+        margin-left: 0;
+    }
+
+    #infoHorizional p{
+        padding: 5px;
+        box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        background-color: rgba(240, 240, 240, 0.228);
+        min-width: 90vw;
+        margin: auto;
+    }
+
+}
+
+
+#button1{
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    user-select: none;
+    font-weight: 800;
+    border-radius: 10px;
+    border: rgb(255, 255, 255) 2px solid;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    font-size: 24px;
+    background-image: linear-gradient(to right, transparent 50%, rgb(246, 246, 246) 50%);
+    background-size: 200%;
+    background-position: 0;
+}
+
+#buy1{
+    width: 1;
+}
+
+#button1:hover #buy1{
+    transform: translateY(-100%);
+}
+
+#button1:hover{
+    box-shadow: 0px 0px 15px white;
+    color: rgb(14, 14, 14);
+    background-position: 100%;
+}
+
+
+.imp1{    
     background: linear-gradient(to right, cyan 20%, rgb(0, 255, 21) 40%, rgb(0, 255, 34) 60%, cyan 80%);
     background-size: 200% auto;
     
@@ -132,110 +270,5 @@ h1, h2, h3, .imp{
   to {
     background-position: 200% center;
   }
-}
-
-#infoHorizional{
-    margin-left: 4vw;
-}
-
-#infoHorizional p{
-    max-width: 80vw;
-}
-
-#buying{
-    width: 100vw;
-    text-align: center;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-  
-  th, td {
-    padding: 8px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
-
-  
-  th {
-    color: white;
-  }
-
-
-
-
-@media only screen and (max-width: 460px) {
-    body{
-        text-align: center;
-    }
-    .del{
-        display: none;
-    }
-    #info{
-        
-        flex-direction: column;
-    }
-    #infoChild{
-        text-align: center;
-        margin: 10px;
-        max-width: 100vw;
-    }
-    #infoChild p{
-        text-align: center;
-        margin: 0;
-    }
-    p{
-        width: 100%;
-        text-align: center;
-    }
-    #infoHorizional{
-        min-width: 100vw;
-        margin-left: 0;
-    }
-
-    #infoHorizional p{
-        min-width: 90vw;
-        margin: auto;
-    }
-
-}
-
-
-#button1{
-    text-decoration: none;
-    user-select: none;
-    font-weight: 800;
-    border-radius: 10px;
-    border: rgb(8, 152, 255) 2px solid;
-    color: rgb(8, 152, 255);
-    background: transparent;
-    transition: 0.3s;
-    font-family: 'Montserrat', sans-serif;
-    padding: 20px;
-    font-size: 24px;
-    background-image: linear-gradient(to right, transparent 50%, rgb(8, 152, 255) 50%);
-    background-size: 200%;
-    background-position: 0;
-}
-
-#button1:hover{
-    box-shadow: 0px 0px 15px rgb(8, 152, 255);
-    color: white;
-    background-position: 100%;
-}
-
-th{
-    color: rgb(24, 24, 24);
-}
-
-.red{
-    color: rgb(234, 41, 41);
-}
-
-.green{
-    color: rgb(86, 234, 41);
 }
 
